@@ -145,9 +145,9 @@ public class agenda {
                 sirNume[index] = valoare;
                 index++;}
             else{ // incercam sa gasim locuri libere in sir
-                for (int ii = 0; i < sirNume.length; ii++) {
-                    if (sirNume[ii] == null) { //a gasit primul loc liber, il scriem aici
-                        sirNume[ii] = valoare;
+                for (int j = 0; j < sirNume.length; j++) {
+                    if (sirNume[j] == null) { //a gasit primul loc liber, il scriem aici
+                        sirNume[j] = valoare;
                         System.out.println("Numele " + valoare + " a fost introdus in agenda!");
                         break;
                     }
@@ -198,9 +198,7 @@ public class agenda {
     public static void modificare(String nume) {
         int index = cautare(nume); //indexul numelui de modificat
         if (index == -1) {
-            System.out.println();
             printConsole("Numele " + nume + " nu exista in agenda!");
-            System.out.println();
         } else {
             String numeModif = readStringConsole("Introduceti numele dorit: ");
             sirNume[index] = numeModif;  //inlocuim numele de la indexul respectiv cu numele nou
